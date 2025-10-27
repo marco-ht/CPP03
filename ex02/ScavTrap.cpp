@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 18:18:37 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/27 21:02:47 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/27 21:27:31 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ ScavTrap&   ScavTrap::operator=(const ScavTrap &other)
     std::cout << "ScavTrap: Copy assignment operator called" << std::endl;
     return(*this);
 }
+
 ScavTrap::~ScavTrap()
 {
     std::cout << "ScavTrap (" << name << "): Destructor called" << std::endl;
