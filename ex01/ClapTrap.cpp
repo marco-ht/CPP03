@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:23:23 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/27 20:19:56 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/27 20:41:18 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
     ClapTrap::ClapTrap():
     name("noname"), hit_points(10), energy_points(10), attack_damage(0)
     {
-        std::cout << "Default constructor called, 'noname' assigned"<<std::endl;
+        std::cout << "ClapTrap: Default constructor called, 'noname' assigned"<<std::endl;
     }
     
     ClapTrap::ClapTrap(const ClapTrap &other):
     name(other.name), hit_points(other.hit_points),
     energy_points(other.energy_points), attack_damage(other.attack_damage)
     {
-        std::cout << "Copy constructor called" << std::endl;
+        std::cout << "ClapTrap: Copy constructor called" << std::endl;
     }
     
     ClapTrap&   ClapTrap::operator=(const ClapTrap &other)
@@ -34,13 +34,13 @@
         this->hit_points = other.hit_points;
         this->energy_points = other.energy_points;
         this->attack_damage = other.attack_damage;
-        std::cout << "Copy assignment operator called" << std::endl;
+        std::cout << "ClapTrap: Copy assignment operator called" << std::endl;
         return(*this);
     }
     
     ClapTrap::~ClapTrap()
     {
-        std::cout << name << ": Destructor called" << std::endl;
+        std::cout << "ClapTrap (" << name << "): Destructor called" << std::endl;
     }
     //End Canonical Orthodox Class
     
@@ -96,5 +96,6 @@
         energy_points--;
         std::cout << "ClapTrap " << name << " repairs itself , regaining "
         << amount << " points of health! (hit points: "
-        << hit_points << ", " << "energy points:" << energy_points << ")" << std::endl;   }
+        << hit_points << ", " << "energy points:" << energy_points << ")" << std::endl;
+    }
     

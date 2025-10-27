@@ -6,7 +6,7 @@
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 13:22:52 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/27 20:19:49 by mpierant         ###   ########.fr       */
+/*   Updated: 2025/10/27 20:19:00 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
     std::string name;
     int hit_points;
     int energy_points;
@@ -29,7 +29,7 @@ class ClapTrap
     ClapTrap(const ClapTrap &other);
     ClapTrap&   operator=(const ClapTrap &other);
     ~ClapTrap();
-    //End Canonical Orthodox Class
+   //End Canonical Orthodox Class
     
     ClapTrap(const std::string& name);
     

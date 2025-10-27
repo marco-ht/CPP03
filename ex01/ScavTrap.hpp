@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpierant <marvin@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 13:22:52 by mpierant          #+#    #+#             */
-/*   Updated: 2025/10/27 20:19:49 by mpierant         ###   ########.fr       */
+/*   Created: 2025/10/27 18:17:38 by mpierant          #+#    #+#             */
+/*   Updated: 2025/10/27 20:18:55 by mpierant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 #include <string>
+#include "ClapTrap.hpp"
 
-class ClapTrap
+class   ScavTrap : public ClapTrap
 {
-    private:
-    std::string name;
-    int hit_points;
-    int energy_points;
-    int attack_damage;
-
     public:
     //Canonical Orthodox Class
-    ClapTrap();
-    ClapTrap(const ClapTrap &other);
-    ClapTrap&   operator=(const ClapTrap &other);
-    ~ClapTrap();
+    ScavTrap();
+    ScavTrap(const ScavTrap &other);
+    ScavTrap&   operator=(const ScavTrap &other);
+    ~ScavTrap();
     //End Canonical Orthodox Class
-    
-    ClapTrap(const std::string& name);
+
+    ScavTrap(const std::string& name);
     
     void attack(const std::string& target);
-    void takeDamage(unsigned int amount);
-    void beRepaired(unsigned int amount);
+    void guardGate();
 };
 
 /* 
